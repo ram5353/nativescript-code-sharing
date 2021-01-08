@@ -4,8 +4,10 @@
 <GridLayout class="page">
   <ListView [items]="players" class="list-group">
     <ng-template let-player="item">
-      <Label [nsRouterLink]="['/player', player.id]" [text]="player.name"
-      class="list-group-item"></Label>
+      <GridLayout>
+         <Label [nsRouterLink]="['/player', player.id]" [text]="player.name"
+         class="list-group-item"></Label>
+     </GridLayout>
     </ng-template>
   </ListView>
 </GridLayout>
